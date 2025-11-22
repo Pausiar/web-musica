@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Historia de la Música - Viaje a través del Tiempo</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navegación flotante -->
+    <nav class="main-nav">
+        <button class="nav-toggle" aria-label="Abrir menú">
+            <div class="hamburger">
+                <div class="line"></div>
+                <div class="line"></div>
+            </div>
+        </button>
+        <button class="back-to-top" aria-label="Volver arriba">↑</button>
+    </nav>
+
+    <!-- Pantalla de carga -->
+    <div class="loading-screen">
+        <div class="loading-content">
+            <div class="loading-bar"></div>
+            <div class="loading-text">Cargando...</div>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-bg"></div>
+        <div class="hero-content">
+            <div class="hero-logo">
+                <h1 class="hero-title">
+                    <span class="title-line">HISTORIA</span>
+                    <span class="title-line">DE LA</span>
+                    <span class="title-line">MÚSICA</span>
+                </h1>
+                <img src="img/logo.png" alt="Logo Historia de la Música" class="title-decoration">
+            </div>
+            <p class="hero-subtitle">Un viaje cinematográfico a través de las épocas musicales</p>
+            <button class="hero-cta" aria-label="Ver contenido">
+                <svg width="75" height="75" fill="none" viewBox="0 0 75 75" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="75" height="75" rx="37.5" fill="black" fill-opacity="0.4"/>
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M37.5 75C58.2107 75 75 58.2107 75 37.5C75 16.7893 58.2107 0 37.5 0C16.7893 0 0 16.7893 0 37.5C0 58.2107 16.7893 75 37.5 75ZM31.6852 27.0487C31.3486 26.8324 30.9208 26.817 30.5696 27.0088C30.2184 27.2005 30 27.5686 30 27.9688V47.6562C30 48.0564 30.2184 48.4245 30.5696 48.6163C30.9208 48.808 31.3486 48.7926 31.6852 48.5763L46.9977 38.7326C47.3107 38.5313 47.5 38.1847 47.5 37.8125C47.5 37.4403 47.3107 37.0937 46.9977 36.8924L31.6852 27.0487Z" fill="currentColor"/>
+                </svg>
+                <span>COMENZAR EL VIAJE</span>
+            </button>
+            <div class="scroll-indicator">
+                <svg width="34" height="14" viewBox="0 0 34 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M33.5609 1.54346C34.0381 2.5875 33.6881 3.87821 32.7791 4.42633L17.0387 13.9181L1.48663 4.42115C0.580153 3.86761 0.235986 2.57483 0.717909 1.53365C1.19983 0.492464 2.32535 0.097152 3.23182 0.650692L17.0497 9.08858L31.051 0.64551C31.96 0.0973872 33.0837 0.499411 33.5609 1.54346Z" fill="currentColor"/>
+                </svg>
+                <span>Desplázate para explorar</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Intro Section -->
+    <section class="intro-section">
+        <div class="intro-content">
+            <h2 class="intro-title">Un recorrido por la historia</h2>
+            <p class="intro-text">
+                Desde los cantos gregorianos hasta el hip-hop moderno, la música ha sido el 
+                lenguaje universal de la humanidad. Cada época ha dejado su huella sonora, 
+                cada generación ha creado su propia banda sonora. Prepárate para explorar 
+                los momentos más importantes que han definido la música tal como la conocemos.
+            </p>
+        </div>
+    </section>
+
+    <!-- Época Medieval -->
+    <section class="era-section medieval" data-era="medieval">
+        <div class="era-background">
+            <div class="parallax-layer layer-bg"></div>
+            <div class="parallax-layer layer-fg"></div>
+        </div>
+        <div class="era-content">
+            <div class="era-text">
+                <h2 class="era-title">Música Medieval</h2>
+                <div class="era-period">500 - 1400 d.C.</div>
+                <div class="era-description">
+                    <blockquote class="era-quote">
+                        "La música es el arte más directo, entra por el oído y va al corazón."
+                    </blockquote>
+                    <p class="era-paragraph">
+                        En los monasterios y castillos de la Europa medieval, nacieron los primeros 
+                        sistemas de notación musical. El canto gregoriano dominaba las ceremonias 
+                        religiosas, mientras los trovadores recorrían los reinos compartiendo 
+                        canciones de amor cortés y hazañas heroicas.
+                    </p>
+                    <p class="era-paragraph">
+                        Esta época vio el desarrollo de la polifonía, permitiendo que múltiples 
+                        melodías sonaran simultáneamente, un concepto revolucionario que cambiaría 
+                        la música para siempre.
+                    </p>
+                </div>
+                <div class="era-highlights">
+                    <h3 class="highlights-title">Características principales</h3>
+                    <ul class="highlights-list">
+                        <li>Canto gregoriano y música litúrgica</li>
+                        <li>Desarrollo de la notación musical</li>
+                        <li>Trovadores y juglares</li>
+                        <li>Instrumentos: laúd, vihuela, organistrum</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="era-image">
+                <div class="image-frame">
+                    <img src="img/fotos-periodos/medieval.webp" alt="Música Medieval" class="era-img">
+                </div>
+                <blockquote class="image-quote">
+                    "Los monjes preservaron la tradición musical"
+                </blockquote>
+            </div>
+        </div>
+    </section>
+
+    <!-- Época Renacentista -->
+    <section class="era-section renaissance" data-era="renaissance">
+        <div class="era-background">
+            <div class="parallax-layer layer-bg"></div>
+            <div class="parallax-layer layer-fg"></div>
+        </div>
+        <div class="era-content reverse">
+            <div class="era-image">
+                <div class="image-frame">
+                    <img src="img/fotos-periodos/renaissance.jpg" alt="Renacimiento Musical" class="era-img">
+                </div>
+                <blockquote class="image-quote">
+                    "El humanismo transformó la composición"
+                </blockquote>
+            </div>
+            <div class="era-text">
+                <h2 class="era-title">Renacimiento</h2>
+                <div class="era-period">1400 - 1600</div>
+                <div class="era-description">
+                    <blockquote class="era-quote">
+                        "La armonía perfecta refleja el orden del universo."
+                    </blockquote>
+                    <p class="era-paragraph">
+                        El Renacimiento trajo una explosión de creatividad musical. Los compositores 
+                        exploraron nuevas formas de armonía y contrapunto, creando obras de 
+                        increíble belleza y complejidad. La música se volvió más expresiva y 
+                        emotiva, reflejando el espíritu humanista de la época.
+                    </p>
+                    <p class="era-paragraph">
+                        Compositores como Palestrina, Josquin des Prez y Monteverdi elevaron 
+                        la música coral a nuevas alturas, mientras la música instrumental 
+                        comenzaba a ganar importancia propia.
+                    </p>
+                </div>
+                <div class="era-highlights">
+                    <h3 class="highlights-title">Compositores destacados</h3>
+                    <ul class="highlights-list">
+                        <li>Giovanni Pierluigi da Palestrina</li>
+                        <li>Josquin des Prez</li>
+                        <li>Claudio Monteverdi</li>
+                        <li>Orlando di Lasso</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Época Barroca -->
+    <section class="era-section baroque" data-era="baroque">
+        <div class="era-background">
+            <div class="parallax-layer layer-bg"></div>
+            <div class="parallax-layer layer-fg"></div>
+        </div>
+        <div class="era-content">
+            <div class="era-text">
+                <h2 class="era-title">Barroco</h2>
+                <div class="era-period">1600 - 1750</div>
+                <div class="era-description">
+                    <blockquote class="era-quote">
+                        "La música es la aritmética del sonido."
+                    </blockquote>
+                    <p class="era-paragraph">
+                        La era dorada de Bach, Vivaldi y Händel. El Barroco se caracterizó 
+                        por su ornamentación elaborada, el contraste dramático y la expresión 
+                        emocional intensa. Nació la ópera, el concierto y la sonata tal como 
+                        los conocemos.
+                    </p>
+                    <p class="era-paragraph">
+                        El bajo continuo proporcionaba la base armónica sobre la cual se 
+                        construían melodías floridas y virtuosas. La música barroca era 
+                        grandiosa, teatral y profundamente emotiva.
+                    </p>
+                </div>
+                <div class="era-highlights">
+                    <h3 class="highlights-title">Obras maestras</h3>
+                    <ul class="highlights-list">
+                        <li>Las Cuatro Estaciones - Vivaldi</li>
+                        <li>El Clave Bien Temperado - Bach</li>
+                        <li>El Mesías - Händel</li>
+                        <li>Canon en Re - Pachelbel</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="era-image">
+                <div class="image-frame">
+                    <img src="img/fotos-periodos/baroque.jpg" alt="Música Barroca" class="era-img">
+                </div>
+                <blockquote class="image-quote">
+                    "El virtuosismo alcanzó su máxima expresión"
+                </blockquote>
+            </div>
+        </div>
+    </section>
+
+    <!-- Época Clásica -->
+    <section class="era-section classical" data-era="classical">
+        <div class="era-background">
+            <div class="parallax-layer layer-bg"></div>
+            <div class="parallax-layer layer-fg"></div>
+        </div>
+        <div class="era-content reverse">
+            <div class="era-image">
+                <div class="image-frame">
+                    <img src="img/fotos-periodos/classical.jpg" alt="Música Clásica" class="era-img">
+                </div>
+                <blockquote class="image-quote">
+                    "Equilibrio, claridad y proporción"
+                </blockquote>
+            </div>
+            <div class="era-text">
+                <h2 class="era-title">Clasicismo</h2>
+                <div class="era-period">1750 - 1820</div>
+                <div class="era-description">
+                    <blockquote class="era-quote">
+                        "La simplicidad es la máxima sofisticación."
+                    </blockquote>
+                    <p class="era-paragraph">
+                        Mozart, Haydn y el joven Beethoven definieron esta era de claridad, 
+                        equilibrio y forma perfecta. La sinfonía alcanzó su estructura clásica, 
+                        y el piano se convirtió en el rey de los instrumentos.
+                    </p>
+                    <p class="era-paragraph">
+                        El clasicismo buscaba la perfección formal, la melodía elegante y 
+                        la armonía transparente. Fue una época de refinamiento y gracia, 
+                        donde cada nota tenía su lugar preciso.
+                    </p>
+                </div>
+                <div class="era-highlights">
+                    <h3 class="highlights-title">Los grandes maestros</h3>
+                    <ul class="highlights-list">
+                        <li>Wolfgang Amadeus Mozart</li>
+                        <li>Joseph Haydn</li>
+                        <li>Ludwig van Beethoven (periodo temprano)</li>
+                        <li>Antonio Salieri</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Época Romántica -->
+    <section class="era-section romantic" data-era="romantic">
+        <div class="era-background">
+            <div class="parallax-layer layer-bg"></div>
+            <div class="parallax-layer layer-fg"></div>
+        </div>
+        <div class="era-content">
+            <div class="era-text">
+                <h2 class="era-title">Romanticismo</h2>
+                <div class="era-period">1820 - 1900</div>
+                <div class="era-description">
+                    <blockquote class="era-quote">
+                        "La música es el lenguaje del espíritu."
+                    </blockquote>
+                    <p class="era-paragraph">
+                        La emoción desbordante y la expresión personal dominaron esta época. 
+                        Chopin, Liszt, Wagner y Tchaikovsky expandieron los límites de la 
+                        orquesta y el piano, creando obras de pasión desbordante y 
+                        dramatismo intenso.
+                    </p>
+                    <p class="era-paragraph">
+                        El romanticismo celebraba el individuo, la naturaleza y lo sublime. 
+                        Las formas musicales se expandieron, las orquestas crecieron y la 
+                        música se volvió más programática, contando historias y pintando 
+                        paisajes sonoros.
+                    </p>
+                </div>
+                <div class="era-highlights">
+                    <h3 class="highlights-title">Innovaciones</h3>
+                    <ul class="highlights-list">
+                        <li>Expansión de la orquesta sinfónica</li>
+                        <li>Desarrollo del lied (canción artística)</li>
+                        <li>Poema sinfónico y música programática</li>
+                        <li>Virtuosismo pianístico extremo</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="era-image">
+                <div class="image-frame">
+                    <img src="img/fotos-periodos/romantic.webp" alt="Música Romántica" class="era-img">
+                </div>
+                <blockquote class="image-quote">
+                    "La pasión se convirtió en arte"
+                </blockquote>
+            </div>
+        </div>
+    </section>
+
+    <!-- Siglo XX -->
+    <section class="era-section modern" data-era="modern">
+        <div class="era-background">
+            <div class="parallax-layer layer-bg"></div>
+            <div class="parallax-layer layer-fg"></div>
+        </div>
+        <div class="era-content reverse">
+            <div class="era-image">
+                <div class="image-frame">
+                    <img src="img/fotos-periodos/modern.jpg" alt="Música Moderna" class="era-img">
+                </div>
+                <blockquote class="image-quote">
+                    "Rompiendo todas las reglas"
+                </blockquote>
+            </div>
+            <div class="era-text">
+                <h2 class="era-title">Siglo XX y Contemporáneo</h2>
+                <div class="era-period">1900 - Actualidad</div>
+                <div class="era-description">
+                    <blockquote class="era-quote">
+                        "Todo sonido puede ser música."
+                    </blockquote>
+                    <p class="era-paragraph">
+                        El siglo XX explotó en mil direcciones. Jazz, blues, rock, electrónica, 
+                        minimalismo, atonalismo... La música se volvió experimental, diversa y 
+                        global. La tecnología transformó no solo cómo hacemos música, sino qué 
+                        consideramos música.
+                    </p>
+                    <p class="era-paragraph">
+                        Desde las disonancias de Stravinsky hasta los beats de hip-hop, desde 
+                        la música concreta de Schaeffer hasta el ambient de Brian Eno, el siglo 
+                        XX demostró que los límites de la música son infinitos.
+                    </p>
+                </div>
+                <div class="era-highlights">
+                    <h3 class="highlights-title">Movimientos clave</h3>
+                    <ul class="highlights-list">
+                        <li>Jazz y blues</li>
+                        <li>Rock and roll</li>
+                        <li>Música electrónica y experimental</li>
+                        <li>Hip-hop y música urbana</li>
+                        <li>Minimalismo y música ambiental</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="footer-content">
+            <div class="footer-logo">
+                <h2>Historia de la Música</h2>
+                <p>Material educativo para ESO</p>
+            </div>
+            <div class="footer-info">
+                <p>&copy; 2024 - Recurso educativo</p>
+                <p>Diseñado con pasión por la enseñanza musical</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
