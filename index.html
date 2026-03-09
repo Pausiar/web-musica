@@ -7,8 +7,25 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- Navegación flotante -->
+    <div class="custom-cursor" aria-hidden="true">
+        <div class="cursor-dot"></div>
+        <div class="cursor-ring"></div>
+    </div>
+
+    <div class="app-noise" aria-hidden="true"></div>
+    <canvas class="fx-canvas" aria-hidden="true"></canvas>
+    <div class="sakura-container" aria-hidden="true"></div>
+
+    <div class="scroll-progress" aria-hidden="true">
+        <div class="scroll-progress-bar"></div>
+    </div>
+
+    <!-- Navegación principal -->
     <nav class="main-nav">
+        <a href="#hero" class="brand-mark" data-scroll>
+            <span class="brand-symbol">♪</span>
+            <span class="brand-text">Historia de la Música</span>
+        </a>
         <button class="nav-toggle" aria-label="Abrir menú">
             <div class="hamburger">
                 <div class="line"></div>
@@ -18,18 +35,56 @@
         <button class="back-to-top" aria-label="Volver arriba">↑</button>
     </nav>
 
+    <aside class="era-nav" aria-label="Navegación por épocas">
+        <a href="#medieval" class="era-dot active" data-era-link="medieval" data-scroll>
+            <span>Medieval</span>
+        </a>
+        <a href="#renaissance" class="era-dot" data-era-link="renaissance" data-scroll>
+            <span>Renacimiento</span>
+        </a>
+        <a href="#baroque" class="era-dot" data-era-link="baroque" data-scroll>
+            <span>Barroco</span>
+        </a>
+        <a href="#classical" class="era-dot" data-era-link="classical" data-scroll>
+            <span>Clasicismo</span>
+        </a>
+        <a href="#romantic" class="era-dot" data-era-link="romantic" data-scroll>
+            <span>Romanticismo</span>
+        </a>
+        <a href="#modern" class="era-dot" data-era-link="modern" data-scroll>
+            <span>Contemporáneo</span>
+        </a>
+    </aside>
+
+    <div class="menu-overlay" aria-hidden="true">
+        <div class="menu-inner">
+            <p class="menu-eyebrow">Explorar por periodos</p>
+            <a href="#intro" data-scroll>Introducción</a>
+            <a href="#medieval" data-scroll>Música Medieval</a>
+            <a href="#renaissance" data-scroll>Renacimiento</a>
+            <a href="#baroque" data-scroll>Barroco</a>
+            <a href="#classical" data-scroll>Clasicismo</a>
+            <a href="#romantic" data-scroll>Romanticismo</a>
+            <a href="#modern" data-scroll>Siglo XX y Actualidad</a>
+        </div>
+    </div>
+
     <!-- Pantalla de carga -->
     <div class="loading-screen">
         <div class="loading-content">
+            <div class="loading-icon">♪</div>
             <div class="loading-bar"></div>
-            <div class="loading-text">Cargando...</div>
+            <div class="loading-text">Preparando tu viaje musical...</div>
+            <div class="loading-counter">0%</div>
         </div>
     </div>
 
     <!-- Hero Section -->
-    <section class="hero">
+    <section id="hero" class="hero">
         <div class="hero-bg"></div>
+        <div class="hero-radial" aria-hidden="true"></div>
         <div class="hero-content">
+            <p class="hero-kicker reveal">Material educativo para ESO</p>
             <div class="hero-logo">
                 <h1 class="hero-title">
                     <span class="title-line">HISTORIA</span>
@@ -39,13 +94,43 @@
                 <img src="img/logo.png" alt="Logo Historia de la Música" class="title-decoration">
             </div>
             <p class="hero-subtitle">Un viaje cinematográfico a través de las épocas musicales</p>
-            <button class="hero-cta" aria-label="Ver contenido">
+            <div class="hero-marquee" aria-hidden="true">
+                <div class="marquee-track">
+                    <span>MEDIEVAL</span><span>·</span>
+                    <span>RENACIMIENTO</span><span>·</span>
+                    <span>BARROCO</span><span>·</span>
+                    <span>CLASICISMO</span><span>·</span>
+                    <span>ROMANTICISMO</span><span>·</span>
+                    <span>CONTEMPORÁNEO</span><span>·</span>
+                    <span>MEDIEVAL</span><span>·</span>
+                    <span>RENACIMIENTO</span><span>·</span>
+                    <span>BARROCO</span><span>·</span>
+                    <span>CLASICISMO</span><span>·</span>
+                    <span>ROMANTICISMO</span><span>·</span>
+                    <span>CONTEMPORÁNEO</span><span>·</span>
+                </div>
+            </div>
+            <button class="hero-cta" aria-label="Ver contenido" data-scroll-target="#intro">
                 <svg width="75" height="75" fill="none" viewBox="0 0 75 75" xmlns="http://www.w3.org/2000/svg">
                     <rect width="75" height="75" rx="37.5" fill="black" fill-opacity="0.4"/>
                     <path fill-rule="evenodd" clip-rule="evenodd" d="M37.5 75C58.2107 75 75 58.2107 75 37.5C75 16.7893 58.2107 0 37.5 0C16.7893 0 0 16.7893 0 37.5C0 58.2107 16.7893 75 37.5 75ZM31.6852 27.0487C31.3486 26.8324 30.9208 26.817 30.5696 27.0088C30.2184 27.2005 30 27.5686 30 27.9688V47.6562C30 48.0564 30.2184 48.4245 30.5696 48.6163C30.9208 48.808 31.3486 48.7926 31.6852 48.5763L46.9977 38.7326C47.3107 38.5313 47.5 38.1847 47.5 37.8125C47.5 37.4403 47.3107 37.0937 46.9977 36.8924L31.6852 27.0487Z" fill="currentColor"/>
                 </svg>
                 <span>COMENZAR EL VIAJE</span>
             </button>
+            <div class="hero-metrics reveal">
+                <article>
+                    <strong>7</strong>
+                    <span>Siglos narrados</span>
+                </article>
+                <article>
+                    <strong>6</strong>
+                    <span>Grandes épocas</span>
+                </article>
+                <article>
+                    <strong>∞</strong>
+                    <span>Formas sonoras</span>
+                </article>
+            </div>
             <div class="scroll-indicator">
                 <svg width="34" height="14" viewBox="0 0 34 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path fill-rule="evenodd" clip-rule="evenodd" d="M33.5609 1.54346C34.0381 2.5875 33.6881 3.87821 32.7791 4.42633L17.0387 13.9181L1.48663 4.42115C0.580153 3.86761 0.235986 2.57483 0.717909 1.53365C1.19983 0.492464 2.32535 0.097152 3.23182 0.650692L17.0497 9.08858L31.051 0.64551C31.96 0.0973872 33.0837 0.499411 33.5609 1.54346Z" fill="currentColor"/>
@@ -56,8 +141,8 @@
     </section>
 
     <!-- Intro Section -->
-    <section class="intro-section">
-        <div class="intro-content">
+    <section id="intro" class="intro-section">
+        <div class="intro-content reveal">
             <h2 class="intro-title">Un recorrido por la historia</h2>
             <p class="intro-text">
                 Desde los cantos gregorianos hasta el hip-hop moderno, la música ha sido el 
@@ -66,18 +151,160 @@
                 los momentos más importantes que han definido la música tal como la conocemos.
             </p>
         </div>
+        <div class="intro-panel reveal">
+            <p>"Escuchar la historia de la música es escuchar la historia de cómo sentimos."</p>
+            <span>Línea temporal inmersiva</span>
+        </div>
+    </section>
+
+    <!-- Timeline visual -->
+    <section class="timeline-section" aria-label="Línea temporal">
+        <h2 class="timeline-heading reveal">Línea del Tiempo</h2>
+        <div class="timeline">
+            <div class="timeline-line" aria-hidden="true"></div>
+            <div class="timeline-item reveal" data-year="500">
+                <div class="timeline-marker"></div>
+                <div class="timeline-card">
+                    <strong>500 d.C.</strong>
+                    <p>Inicio de la tradición del canto gregoriano</p>
+                </div>
+            </div>
+            <div class="timeline-item reveal" data-year="1025">
+                <div class="timeline-marker"></div>
+                <div class="timeline-card">
+                    <strong>1025</strong>
+                    <p>Guido d'Arezzo crea las notas musicales (Do, Re, Mi...)</p>
+                </div>
+            </div>
+            <div class="timeline-item reveal" data-year="1400">
+                <div class="timeline-marker"></div>
+                <div class="timeline-card">
+                    <strong>1400</strong>
+                    <p>Comienza el Renacimiento musical: polifonía coral</p>
+                </div>
+            </div>
+            <div class="timeline-item reveal" data-year="1607">
+                <div class="timeline-marker"></div>
+                <div class="timeline-card">
+                    <strong>1607</strong>
+                    <p>Monteverdi estrena "L'Orfeo", primera ópera moderna</p>
+                </div>
+            </div>
+            <div class="timeline-item reveal" data-year="1685">
+                <div class="timeline-marker"></div>
+                <div class="timeline-card">
+                    <strong>1685</strong>
+                    <p>Nacen Bach y Händel, los titanes del Barroco</p>
+                </div>
+            </div>
+            <div class="timeline-item reveal" data-year="1756">
+                <div class="timeline-marker"></div>
+                <div class="timeline-card">
+                    <strong>1756</strong>
+                    <p>Nace Mozart, el prodigio del Clasicismo</p>
+                </div>
+            </div>
+            <div class="timeline-item reveal" data-year="1824">
+                <div class="timeline-marker"></div>
+                <div class="timeline-card">
+                    <strong>1824</strong>
+                    <p>Beethoven estrena la 9ª Sinfonía siendo sordo</p>
+                </div>
+            </div>
+            <div class="timeline-item reveal" data-year="1877">
+                <div class="timeline-marker"></div>
+                <div class="timeline-card">
+                    <strong>1877</strong>
+                    <p>Edison inventa el fonógrafo: la música se puede grabar</p>
+                </div>
+            </div>
+            <div class="timeline-item reveal" data-year="1954">
+                <div class="timeline-marker"></div>
+                <div class="timeline-card">
+                    <strong>1954</strong>
+                    <p>Elvis y el rock and roll transforman la cultura</p>
+                </div>
+            </div>
+            <div class="timeline-item reveal" data-year="1983">
+                <div class="timeline-marker"></div>
+                <div class="timeline-card">
+                    <strong>1983</strong>
+                    <p>Se estandariza el MIDI: la revolución digital</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Datos curiosos animados -->
+    <section class="fun-facts-section">
+        <h2 class="fun-facts-heading reveal">¿Sabías que...?</h2>
+        <div class="fun-facts-grid">
+            <article class="fact-card reveal" data-tilt>
+                <div class="fact-icon">🎵</div>
+                <p>La música más antigua conocida tiene <strong>más de 3.400 años</strong> y fue hallada en una tablilla sumeria.</p>
+            </article>
+            <article class="fact-card reveal" data-tilt>
+                <div class="fact-icon">🧠</div>
+                <p>Escuchar música activa <strong>todas las áreas conocidas del cerebro</strong> simultáneamente.</p>
+            </article>
+            <article class="fact-card reveal" data-tilt>
+                <div class="fact-icon">🎻</div>
+                <p>Un violín Stradivarius puede valer más de <strong>16 millones de dólares</strong>.</p>
+            </article>
+            <article class="fact-card reveal" data-tilt>
+                <div class="fact-icon">🎹</div>
+                <p>Mozart compuso su primera sinfonía completa a los <strong>8 años</strong> de edad.</p>
+            </article>
+            <article class="fact-card reveal" data-tilt>
+                <div class="fact-icon">🎸</div>
+                <p>La canción más larga de la historia dura <strong>639 años</strong> y se toca en Alemania desde 2001.</p>
+            </article>
+            <article class="fact-card reveal" data-tilt>
+                <div class="fact-icon">🌍</div>
+                <p>Se estima que en el mundo existen más de <strong>1.200 géneros musicales</strong> diferentes.</p>
+            </article>
+        </div>
+    </section>
+
+    <!-- Contador de estadísticas -->
+    <section class="stats-section">
+        <div class="stats-grid">
+            <div class="stat-item reveal">
+                <span class="stat-number" data-target="15">0</span>
+                <span class="stat-suffix">+</span>
+                <span class="stat-label">Siglos de evolución</span>
+            </div>
+            <div class="stat-item reveal">
+                <span class="stat-number" data-target="1200">0</span>
+                <span class="stat-suffix">+</span>
+                <span class="stat-label">Géneros musicales</span>
+            </div>
+            <div class="stat-item reveal">
+                <span class="stat-number" data-target="50">0</span>
+                <span class="stat-suffix">M+</span>
+                <span class="stat-label">Canciones grabadas</span>
+            </div>
+            <div class="stat-item reveal">
+                <span class="stat-number" data-target="8">0</span>
+                <span class="stat-suffix">B</span>
+                <span class="stat-label">Oyentes en el mundo</span>
+            </div>
+        </div>
     </section>
 
     <!-- Época Medieval -->
-    <section class="era-section medieval" data-era="medieval">
+    <section id="medieval" class="era-section medieval" data-era="medieval">
         <div class="era-background">
-            <div class="parallax-layer layer-bg"></div>
-            <div class="parallax-layer layer-fg"></div>
+            <div class="parallax-layer layer-bg" data-speed="0.18"></div>
+            <div class="parallax-layer layer-fg" data-speed="-0.08"></div>
         </div>
         <div class="era-content">
-            <div class="era-text">
+            <div class="era-text reveal">
                 <h2 class="era-title">Música Medieval</h2>
                 <div class="era-period">500 - 1400 d.C.</div>
+                <div class="era-tags">
+                    <span>Liturgia</span><span>Trovadores</span><span>Primeras notaciones</span>
+                </div>
                 <div class="era-description">
                     <blockquote class="era-quote">
                         "La música es el arte más directo, entra por el oído y va al corazón."
@@ -104,7 +331,7 @@
                     </ul>
                 </div>
             </div>
-            <div class="era-image">
+            <div class="era-image reveal">
                 <div class="image-frame">
                     <img src="img/fotos-periodos/medieval.webp" alt="Música Medieval" class="era-img">
                 </div>
@@ -116,13 +343,13 @@
     </section>
 
     <!-- Época Renacentista -->
-    <section class="era-section renaissance" data-era="renaissance">
+    <section id="renaissance" class="era-section renaissance" data-era="renaissance">
         <div class="era-background">
-            <div class="parallax-layer layer-bg"></div>
-            <div class="parallax-layer layer-fg"></div>
+            <div class="parallax-layer layer-bg" data-speed="0.16"></div>
+            <div class="parallax-layer layer-fg" data-speed="-0.06"></div>
         </div>
         <div class="era-content reverse">
-            <div class="era-image">
+            <div class="era-image reveal">
                 <div class="image-frame">
                     <img src="img/fotos-periodos/renaissance.jpg" alt="Renacimiento Musical" class="era-img">
                 </div>
@@ -130,9 +357,12 @@
                     "El humanismo transformó la composición"
                 </blockquote>
             </div>
-            <div class="era-text">
+            <div class="era-text reveal">
                 <h2 class="era-title">Renacimiento</h2>
                 <div class="era-period">1400 - 1600</div>
+                <div class="era-tags">
+                    <span>Humanismo</span><span>Polifonía coral</span><span>Contrapunto</span>
+                </div>
                 <div class="era-description">
                     <blockquote class="era-quote">
                         "La armonía perfecta refleja el orden del universo."
@@ -163,15 +393,18 @@
     </section>
 
     <!-- Época Barroca -->
-    <section class="era-section baroque" data-era="baroque">
+    <section id="baroque" class="era-section baroque" data-era="baroque">
         <div class="era-background">
-            <div class="parallax-layer layer-bg"></div>
-            <div class="parallax-layer layer-fg"></div>
+            <div class="parallax-layer layer-bg" data-speed="0.14"></div>
+            <div class="parallax-layer layer-fg" data-speed="-0.06"></div>
         </div>
         <div class="era-content">
-            <div class="era-text">
+            <div class="era-text reveal">
                 <h2 class="era-title">Barroco</h2>
                 <div class="era-period">1600 - 1750</div>
+                <div class="era-tags">
+                    <span>Ópera</span><span>Bajo continuo</span><span>Virtuosismo</span>
+                </div>
                 <div class="era-description">
                     <blockquote class="era-quote">
                         "La música es la aritmética del sonido."
@@ -198,7 +431,7 @@
                     </ul>
                 </div>
             </div>
-            <div class="era-image">
+            <div class="era-image reveal">
                 <div class="image-frame">
                     <img src="img/fotos-periodos/baroque.jpg" alt="Música Barroca" class="era-img">
                 </div>
@@ -210,13 +443,13 @@
     </section>
 
     <!-- Época Clásica -->
-    <section class="era-section classical" data-era="classical">
+    <section id="classical" class="era-section classical" data-era="classical">
         <div class="era-background">
-            <div class="parallax-layer layer-bg"></div>
-            <div class="parallax-layer layer-fg"></div>
+            <div class="parallax-layer layer-bg" data-speed="0.13"></div>
+            <div class="parallax-layer layer-fg" data-speed="-0.05"></div>
         </div>
         <div class="era-content reverse">
-            <div class="era-image">
+            <div class="era-image reveal">
                 <div class="image-frame">
                     <img src="img/fotos-periodos/classical.jpg" alt="Música Clásica" class="era-img">
                 </div>
@@ -224,9 +457,12 @@
                     "Equilibrio, claridad y proporción"
                 </blockquote>
             </div>
-            <div class="era-text">
+            <div class="era-text reveal">
                 <h2 class="era-title">Clasicismo</h2>
                 <div class="era-period">1750 - 1820</div>
+                <div class="era-tags">
+                    <span>Forma sonata</span><span>Sinfonía</span><span>Piano</span>
+                </div>
                 <div class="era-description">
                     <blockquote class="era-quote">
                         "La simplicidad es la máxima sofisticación."
@@ -256,15 +492,18 @@
     </section>
 
     <!-- Época Romántica -->
-    <section class="era-section romantic" data-era="romantic">
+    <section id="romantic" class="era-section romantic" data-era="romantic">
         <div class="era-background">
-            <div class="parallax-layer layer-bg"></div>
-            <div class="parallax-layer layer-fg"></div>
+            <div class="parallax-layer layer-bg" data-speed="0.15"></div>
+            <div class="parallax-layer layer-fg" data-speed="-0.07"></div>
         </div>
         <div class="era-content">
-            <div class="era-text">
+            <div class="era-text reveal">
                 <h2 class="era-title">Romanticismo</h2>
                 <div class="era-period">1820 - 1900</div>
+                <div class="era-tags">
+                    <span>Expresión</span><span>Nacionalismo</span><span>Orquesta expandida</span>
+                </div>
                 <div class="era-description">
                     <blockquote class="era-quote">
                         "La música es el lenguaje del espíritu."
@@ -292,7 +531,7 @@
                     </ul>
                 </div>
             </div>
-            <div class="era-image">
+            <div class="era-image reveal">
                 <div class="image-frame">
                     <img src="img/fotos-periodos/romantic.webp" alt="Música Romántica" class="era-img">
                 </div>
@@ -304,13 +543,13 @@
     </section>
 
     <!-- Siglo XX -->
-    <section class="era-section modern" data-era="modern">
+    <section id="modern" class="era-section modern" data-era="modern">
         <div class="era-background">
-            <div class="parallax-layer layer-bg"></div>
-            <div class="parallax-layer layer-fg"></div>
+            <div class="parallax-layer layer-bg" data-speed="0.16"></div>
+            <div class="parallax-layer layer-fg" data-speed="-0.06"></div>
         </div>
         <div class="era-content reverse">
-            <div class="era-image">
+            <div class="era-image reveal">
                 <div class="image-frame">
                     <img src="img/fotos-periodos/modern.jpg" alt="Música Moderna" class="era-img">
                 </div>
@@ -318,9 +557,12 @@
                     "Rompiendo todas las reglas"
                 </blockquote>
             </div>
-            <div class="era-text">
+            <div class="era-text reveal">
                 <h2 class="era-title">Siglo XX y Contemporáneo</h2>
                 <div class="era-period">1900 - Actualidad</div>
+                <div class="era-tags">
+                    <span>Jazz</span><span>Electrónica</span><span>Cultura global</span>
+                </div>
                 <div class="era-description">
                     <blockquote class="era-quote">
                         "Todo sonido puede ser música."
@@ -351,6 +593,18 @@
         </div>
     </section>
 
+    <!-- CTA educativo -->
+    <section class="cta-section reveal">
+        <div class="cta-box">
+            <h2>¿Listo para profundizar?</h2>
+            <p>Explora cada época con audios, partituras y actividades interactivas pensadas para el aula.</p>
+            <button class="cta-btn" onclick="window.scrollTo({top:0,behavior:'smooth'})">
+                <span>Volver al inicio</span>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+            </button>
+        </div>
+    </section>
+
     <!-- Footer -->
     <footer class="main-footer">
         <div class="footer-content">
@@ -358,9 +612,54 @@
                 <h2>Historia de la Música</h2>
                 <p>Material educativo para ESO</p>
             </div>
+            <div class="footer-links">
+                <p class="footer-links-title">Épocas</p>
+                <a href="#medieval" data-scroll>Medieval</a>
+                <a href="#renaissance" data-scroll>Renacimiento</a>
+                <a href="#baroque" data-scroll>Barroco</a>
+                <a href="#classical" data-scroll>Clasicismo</a>
+                <a href="#romantic" data-scroll>Romanticismo</a>
+                <a href="#modern" data-scroll>Contemporáneo</a>
+            </div>
             <div class="footer-info">
                 <p>&copy; 2024 - Recurso educativo</p>
                 <p>Diseñado con pasión por la enseñanza musical</p>
+            </div>
+        </div>
+        <div class="footer-marquee" aria-hidden="true">
+            <div class="marquee-track">
+                <span>canto gregoriano</span>
+                <span>·</span>
+                <span>polifonía</span>
+                <span>·</span>
+                <span>ópera</span>
+                <span>·</span>
+                <span>sinfonía</span>
+                <span>·</span>
+                <span>jazz</span>
+                <span>·</span>
+                <span>rock</span>
+                <span>·</span>
+                <span>electrónica</span>
+                <span>·</span>
+                <span>hip-hop</span>
+                <span>·</span>
+                <span>canto gregoriano</span>
+                <span>·</span>
+                <span>polifonía</span>
+                <span>·</span>
+                <span>ópera</span>
+                <span>·</span>
+                <span>sinfonía</span>
+                <span>·</span>
+                <span>jazz</span>
+                <span>·</span>
+                <span>rock</span>
+                <span>·</span>
+                <span>electrónica</span>
+                <span>·</span>
+                <span>hip-hop</span>
+                <span>·</span>
             </div>
         </div>
     </footer>
