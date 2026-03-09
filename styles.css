@@ -355,8 +355,10 @@ body.menu-open {
 .hero-content {
     position: relative;
     z-index: 2;
-    width: min(100%, 980px);
+    width: min(100%, 900px);
+    max-width: 100%;
     text-align: center;
+    margin: 0 auto;
 }
 
 .hero-kicker {
@@ -369,10 +371,12 @@ body.menu-open {
 
 .hero-title {
     font-family: var(--font-display);
-    font-size: clamp(2.7rem, 14vw, 8.3rem);
-    line-height: 0.88;
+    font-size: clamp(2.7rem, 10vw, 7rem);
+    line-height: 0.92;
     letter-spacing: 0.03em;
     margin-bottom: 1.3rem;
+    overflow-wrap: break-word;
+    word-break: break-word;
 }
 
 .title-line {
