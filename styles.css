@@ -330,11 +330,13 @@ body.menu-open {
 
 .hero {
     min-height: 100vh;
-    display: grid;
-    place-items: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     position: relative;
     overflow: hidden;
-    padding: 7rem 1.2rem 2.5rem;
+    padding: 7rem 2rem 2.5rem;
+    width: 100%;
 }
 
 .hero-bg,
@@ -355,10 +357,11 @@ body.menu-open {
 .hero-content {
     position: relative;
     z-index: 2;
-    width: min(100%, 900px);
-    max-width: 100%;
+    width: 100%;
+    max-width: 900px;
     text-align: center;
     margin: 0 auto;
+    overflow: hidden;
 }
 
 .hero-kicker {
@@ -371,12 +374,11 @@ body.menu-open {
 
 .hero-title {
     font-family: var(--font-display);
-    font-size: clamp(2.7rem, 10vw, 7rem);
-    line-height: 0.92;
-    letter-spacing: 0.03em;
+    font-size: clamp(2.2rem, 8vw, 5.5rem);
+    line-height: 0.95;
+    letter-spacing: 0.02em;
     margin-bottom: 1.3rem;
-    overflow-wrap: break-word;
-    word-break: break-word;
+    white-space: nowrap;
 }
 
 .title-line {
